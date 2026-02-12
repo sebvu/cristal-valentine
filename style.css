@@ -17,3 +17,57 @@ found off of https://designpixie.com/blogs/creative-design-ideas/pastel-color-pa
   font-weight: normal;
   font-style: normal;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background-color: #f9e4e0;
+}
+
+.container {
+  min-width: 500px;
+  min-height: 700px;
+  padding: 1em;
+  border: 5px solid black;
+  border-radius: 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+#catgif {
+  height: 350px;
+  width: auto;
+}
+
+.buttons-container {
+  flex: 1;
+  display: flex;
+  gap: 1em;
+}
+
+#button-one,
+#button-two {
+  width: 80px;
+  height: 60px;
+  border: 3px solid black;
+  border-radius: 0.5em;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button-one {
+  background-color: #acc791;
+}
+
+#button-two {
+  background-color: #f1b3a4;
+}
