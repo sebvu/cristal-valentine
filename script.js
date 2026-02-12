@@ -1,28 +1,26 @@
 var yesButton = document.getElementById("button-one");
 var noButton = document.getElementById("button-two");
-var text = document.querySelector("#button-one p");
-
-const gifs = [
-  "images/catgif1.gif",
-  "images/catgif2.gif",
-  "images/catgif3.gif",
-  "images/catgif4.gif",
-  "images/catgif5.gif",
-  "images/catgif6.gif",
-  "images/catgif7.gif",
-  "images/catgif8.gif",
-  "images/catgif9.gif",
-  "images/catgif10.gif",
-];
+var buttonOneText = document.querySelector("#button-one p");
+var gifImage = document.getElementById("catgif");
+var gifSelection = 1;
 
 noButton.addEventListener("click", noButtonClicker);
 
 function noButtonClicker() {
   var buttonWidth = yesButton.offsetWidth;
   var buttonHeight = yesButton.offsetHeight;
-  var textStyle = window.getComputedStyle(text, null);
+  var textStyle = window.getComputedStyle(buttonOneText, null);
   var textSize = parseFloat(textStyle.getPropertyValue("font-size"));
-  console.log(textSize);
+  console.log(gifImage.src);
+
+  gifImage.src = (() => {
+    gifSelection += 1;
+    if (gifSelection >= 11) { // max amount
+      gifSelection = 1;
+    }
+
+    return `images/catgif${gifSelection}.gif`;
+  })();
 
   yesButton.style.width = buttonWidth * 1.2 + "px";
   yesButton.style.height = buttonHeight * 1.2 + "px";
