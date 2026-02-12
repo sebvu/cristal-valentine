@@ -16,6 +16,9 @@ const listOfText = [
   "ic how it is",
   "making me shrivel in my sleep",
   "waa waa waaaa",
+  "i know you want too..",
+  "baby you're making me CRASHOUT",
+  "BARK BABRKABG BRKA",
 ];
 
 noButton.addEventListener("click", noButtonClicker);
