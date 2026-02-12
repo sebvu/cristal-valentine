@@ -45,14 +45,18 @@ a {
   flex-direction: column;
 }
 
+h3 span {
+  color: red;
+}
+
 .yes-container {
   min-width: 500px;
   min-height: 700px;
   padding: 1em;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
