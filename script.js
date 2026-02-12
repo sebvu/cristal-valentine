@@ -5,6 +5,9 @@ var buttonTwoText = document.querySelector("#button-two p");
 var gifImage = document.getElementById("catgif");
 var gifSelection = 1;
 
+var valentinesText = "Cristal, will you be my beautiful valentines? 🥺";
+var speedText = 50;
+
 const listOfText = [
   "you don't mean that right?",
   "come on don't be like that!",
@@ -20,6 +23,30 @@ const listOfText = [
   "baby you're making me CRASHOUT",
   "BARK BABRKABG BRKA",
 ];
+
+console.log(valentinesText.length);
+var i = 0;
+
+function writeValentinesText() {
+  if (i >= valentinesText.length) return;
+
+  var el = document.getElementById("valentines-text");
+
+  if (i < 34) {
+    el.append(valentinesText.charAt(i));
+  } else {
+    var span = document.createElement("span");
+    span.style.color = "red";
+    span.textContent = valentinesText.charAt(i);
+    el.append(span);
+  }
+
+  i++;
+
+  setTimeout(writeValentinesText, speedText);
+}
+
+writeValentinesText();
 
 noButton.addEventListener("click", noButtonClicker);
 
