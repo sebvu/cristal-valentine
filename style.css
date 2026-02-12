@@ -45,10 +45,6 @@ a {
   flex-direction: column;
 }
 
-h3 span {
-  color: red;
-}
-
 .yes-container {
   min-width: 500px;
   min-height: 700px;
